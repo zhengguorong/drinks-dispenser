@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 10px 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .item.active {
+    background: #1890ff;
+  }
+  img {
+    width: 50px;
+  }
+}

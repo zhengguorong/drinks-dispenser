@@ -1,0 +1,36 @@
+.steps {
+  display: flex;
+  flex-direction: row;
+  .step:not(:last-child) {
+    flex: 1;
+    overflow: hidden;
+  }
+  .step .num {
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: rgba(255, 255, 255, 0.55);
+    border: 2px solid rgba(255, 255, 255, 0.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 10px;
+  }
+  .step.active .num{
+    background: #1890ff;
+    color: #fff;
+    border: 2px solid #1890ff;
+  }
+  .step:not(:last-child) .num::after {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    display: block;
+    width: 9999px;
+    height: 1px;
+    background: #e8e8e8;
+    content: '';
+  }
+}

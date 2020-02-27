@@ -1,0 +1,26 @@
+.app-container {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(243, 243, 243);
+  height: 100%;
+  min-width: 800px;
+  .machine {
+    position: relative;
+    background-image: url('../../image/mac.png');
+    background-size: 100% 100%;
+    width: 600px;
+    .screen {
+      background: rgba(0, 0, 0, 0.8);
+      width: 320px;
+      height: 150px;
+      position: absolute;
+      top: 170px;
+      left: 50%;
+      transform: translateX(-58%);
+      border-radius: 10px;
+      color: #fff;
+      padding: 10px 10px;
+      box-sizing: border-box;
+    }
+  }
+}
