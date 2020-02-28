@@ -1,18 +1,24 @@
 import React from 'react';
 import './index.scss';
 
-function Steps() {
+type Props = {
+  curStep: number;
+  steps: Array<Step>;
+};
+
+type Step = {
+  name: String;
+};
+function Steps(props: Props) {
   return (
-      <div className="steps">
-        <div className="step active">
-          <div className="num">1</div>
-        </div>
-        <div className="step">
-          <div className="num">2</div>
-        </div>
-        <div className="step">
-          <div className="num">3</div>
-        </div>
+    <div className="steps">
+      {props.steps.map((step, index) => {
+        return (
+          <div className={`step ${props.curStep >= index ? 'active': ''}`} key={index}>
+            <div className="num">{step.name}</div>
+          </div>
+        );
+      })}
       </div>
   );
 }
