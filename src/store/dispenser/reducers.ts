@@ -31,39 +31,43 @@ const initialState: DispenserState = {
       name: 'sugar',
       checked: false,
       stock: 23,
-    }
-  ]
+    },
+  ],
 };
 
-export function dispenserReducer (
+export function dispenserReducer(
   state = initialState,
   action: ProductActionType
 ): DispenserState {
-  switch(action.type) {
+  console.log(action)
+  switch (action.type) {
     case CHANGE_PRODUCT_STATUS:
       return {
-        products: state.products.map(product => {
+        ...state,
+        products: state.products.map((product) => {
           if (product.name === action.payload) {
-            product.checked = !product.checked
+            product.checked = !product.checked;
           }
           return product;
-        })
-      }
+        }),
+      };
     case UPDATE_PRODUCT_STOCK:
       return {
-        products: state.products.map(product => {
-          if (product.checked) product.stock --
+        ...state,
+        products: state.products.map((product) => {
+          if (product.checked) product.stock--;
           return product;
-        })
-      }
+        }),
+      };
     case INIT_PRODUCT_STATUS:
       return {
-        products: state.products.map(product => {
+        ...state,
+        products: state.products.map((product) => {
           product.checked = false;
           return product;
-        })
-      }
+        }),
+      };
     default:
-      return state
+      return state;
   }
 }

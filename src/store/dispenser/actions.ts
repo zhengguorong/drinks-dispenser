@@ -1,4 +1,4 @@
-import { ProductActionType, CHANGE_PRODUCT_STATUS, UPDATE_PRODUCT_STOCK, INIT_PRODUCT_STATUS, Product } from './types'
+import { ProductActionType ,CHANGE_PRODUCT_STATUS, UPDATE_PRODUCT_STOCK, INIT_PRODUCT_STATUS, Product } from './types'
 import stockAPI from '../../api/stock';
 
 export function changeProductStatus(productName: string): ProductActionType {
@@ -25,12 +25,13 @@ export function updateProductStock(products: Product[]): ProductActionType {
   }
 }
 
-function reportLowStock(lowStockItems: Product[]) {
-  stockAPI.lowstockalert('123', lowStockItems);
-}
 
 export function initProductStatus(): ProductActionType {
   return {
     type: INIT_PRODUCT_STATUS,
   }
+}
+
+function reportLowStock(lowStockItems: Product[]) {
+  stockAPI.lowstockalert('123', lowStockItems);
 }

@@ -19,12 +19,14 @@ interface UpdateProductStockAction {
   payload: Product[]
 }
 
-interface Init_Product_Status {
+interface InitProductStatusAction {
   type: typeof INIT_PRODUCT_STATUS
 }
+
 
 export const CHANGE_PRODUCT_STATUS = 'CHANGE_PRODUCT_STATUS';
 export const UPDATE_PRODUCT_STOCK = 'UPDATE_PRODUCT_STOCK';
 export const INIT_PRODUCT_STATUS = 'INIT_PRODUCT_STATUS';
 
-export type ProductActionType = ChangeProductStatusAction | UpdateProductStockAction | Init_Product_Status
+
+export type ProductActionType = ChangeProductStatusAction | UpdateProductStockAction | InitProductStatusAction
