@@ -33,5 +33,6 @@ export function initProductStatus(): ProductActionType {
 }
 
 function reportLowStock(lowStockItems: Product[]) {
+  console.log(lowStockItems)
   stockAPI.lowstockalert('123', lowStockItems);
 }

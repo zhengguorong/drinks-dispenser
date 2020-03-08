@@ -6,40 +6,24 @@ class TemperatureChart extends React.Component {
     const margin = { top: 18, right: 20, bottom: 10, left: 50 };
     const width = 300;
     const height = 130;
-    const data = [
-      { date: Date.now() + 1, value: 30.41 },
-      { date: Date.now() + 2 * 60 * 1000, value: 40.41 },
-      { date: Date.now() + 3 * 60 * 1000, value: 30.41 },
-      { date: Date.now() + 4 * 60 * 1000, value: 91.41 },
-      { date: Date.now() + 5 * 60 * 1000, value: 91.41 },
-      { date: Date.now() + 6 * 60 * 1000, value: 91.41 },
-      { date: Date.now() + 7 * 60 * 1000, value: 92.41 },
-      { date: Date.now() + 8 * 60 * 1000, value: 90.41 },
-      { date: Date.now() + 9 * 60 * 1000, value: 96.41 },
-      { date: Date.now() + 10 * 60 * 1000, value: 96.41 },
-      { date: Date.now() + 11 * 60 * 1000, value: 96.41 },
-      { date: Date.now() + 12 * 60 * 1000, value: 96.41 },
-      { date: Date.now() + 13 * 60 * 1000, value: 96.41 },
-      { date: Date.now() + 14 * 60 * 1000, value: 91.41 },
-      { date: Date.now() + 15 * 60 * 1000, value: 80.41 },
-    ];
+    const data = this.props.temps;
 
     const x = d3
       .scaleUtc()
-      .domain(d3.extent(data, (d) => d.date))
+      .domain(d3.extent(data, (d) => d.timestamp))
       .range([margin.left, width - margin.right]);
 
     const y = d3
       .scaleLinear()
-      .domain([0, d3.max(data, (d) => d.value)])
+      .domain([0, d3.max(data, (d) => d.temperature)])
       .nice()
       .range([height - margin.bottom, margin.top]);
 
     const line = d3
       .line()
-      .defined((d) => !isNaN(d.value))
-      .x((d) => x(d.date))
-      .y((d) => y(d.value));
+      .defined((d) => !isNaN(d.temperature))
+      .x((d) => x(d.timestamp))
+      .y((d) => y(d.temperature));
 
     const xAxis = (g) =>
       g.attr('transform', `translate(0,${height - margin.bottom})`).call(

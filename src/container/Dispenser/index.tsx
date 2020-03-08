@@ -111,7 +111,7 @@ class Dispenser extends React.Component<Props, State> {
   }
   initDispenser() {
     this.props.initProductStatus();
-    this.setState({ stepIndex: 0 });
+    this.setState({ stepIndex: 0, makeStatus: 'ready' });
   }
   reportTemperature() {
     const interval = setInterval(() => {

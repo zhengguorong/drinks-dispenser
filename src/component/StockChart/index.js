@@ -6,7 +6,7 @@ class StockChart extends React.Component {
     const margin = { top: 15, right: 20, bottom: 10, left: 50 };
     const width = 300;
     const height = 130;
-    const data = [{ name: 'coffee', stock: 32 }, { name: 'tea', stock: 20}, { name: 'milk', stock: 10}, { name: 'sugar', stock: 20}];
+    const data = this.props.products;
     const x = d3
       .scaleBand()
       .domain(d3.range(data.length))

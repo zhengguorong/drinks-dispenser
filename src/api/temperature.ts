@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const getTemperature = (machine_id: string) => {
-  return axios.get('/api/temperature').then(res => {
+  return axios.get('/api/temperature', { params: { machine_id } }).then(res => {
     return res.data;
   })
 }
