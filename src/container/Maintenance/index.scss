@@ -1,0 +1,12 @@
+.container {
+  position: relative;
+  .toggle, .back {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 0px;
+  }
+  .back {
+    left: 0;
+  }
+}

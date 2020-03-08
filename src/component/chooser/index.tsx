@@ -1,34 +1,34 @@
 import React from 'react';
 import './index.scss';
+import { Product } from '../../store/dispenser/types'
 
 type Props = {
-  menus: Array<Menu>;
+  products: Product[];
+  isShowOkBtn?: boolean;
   onChoose: Function;
-};
-
-export type Menu = {
-  url: string;
-  name: string;
-  checked: boolean;
+  onOK?: Function;
 };
 
 function Chooser(props: Props) {
   return (
     <div className="container">
-      {props.menus.map((menu: Menu, index: number) => {
-        return (
-          <div
-            className={`menu ${menu.checked ? 'active': ''}`}
-            onClick={() => {
-              props.onChoose(index);
-            }}
-            key={menu.name}
-          >
-            <img src={menu.url} alt={menu.name} />
-            <div>{menu.name}</div>
-          </div>
-        );
-      })}
+      <div className="menus">
+        {props.products.map((product: Product) => {
+          return (
+            <div
+              className={`menu ${product.checked ? 'active' : ''}`}
+              onClick={() => {
+                props.onChoose(product.name);
+              }}
+              key={product.name}
+            >
+              <img src={product.url} alt={product.name} />
+              <div>{product.name}</div>
+            </div>
+          );
+        })}
+      </div>
+      { props.isShowOkBtn && <div className="ok" onClick={() => props.onOK && props.onOK()}>OK</div>}
     </div>
   );
 }
