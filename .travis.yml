@@ -2,7 +2,7 @@ addons:
   sonarcloud:
     organization: "zhengguorong-github" # the key of the org you chose at step #3
     token:
-      secure: 9785888673923c2fa351fb7e92da6d406ed2c962 # encrypted value of your token
+      secure: b8c47e364bf0181a10ebf5a752f5781691e98e59 # encrypted value of your token
 language: node_js
 node_js:
   - '10'
