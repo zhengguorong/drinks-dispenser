@@ -2,7 +2,7 @@ addons:
   sonarcloud:
     organization: "zhengguorong-github" # the key of the org you chose at step #3
     token:
-      secure: 9785888673923c2fa351fb7e92da6d406ed2c962 # encrypted value of your token
+      secure: "PqAua6igq4Sj2ugi5LVPYTtOcZz3ZUA94KdlRy58x3+sfjOx2CiWfWryELE5Bo7SwGFy29Ji1Sm4hoz6izVnIOKV7GmlaXr3pGJP+PYZl4edOYe7k4CZ01HpDlweQalwcC4wncg5mDAwhtNEUw5OljShSsIIgBuZ6cGYwDFwrL14sPz93rHEZO57c9sHk//ILeupoTXtAQ25N+5wIC2LELoN4eKhkCdRcdA2RL1Y5TswChMNij2BeIZuWBDp1aHfd6nYfrzilN4pAzdNE6zoVVU5BQ4RtVpd6CTZs8FAr7H9XF4xbZBmAhcMr3duN6JYSaOOJnx2PFyf9eD7qbRJTNd0ltHaFOTFP0gR//ROml4FXmKR2CvLXsJZDimXH3PnSFhOaiDwKpvcuI9PM+LPz/F4yf60fTeAi+KSgqjLdhRyxQNg30XkJi/7490MAJOzqG3849JAp9wtApR5CrhriH5Sk5m/GgTLiwKwqW1xU3IWxki8qCbe9x6HNfGM4FSaCrbWC9jpF4zwHtgObK8IGMqgcYqPLQvax58Y+oT1hch1XWtY85bSyBtC+NQmQsgM5+hjix4gcj2tpFkgIegm/SSyQDd8WmnjYpKI1CiOvO+nJTLP3kYvJZQS0nz4L2TNmOZqnazzqQ19IecyeQwofQqPuXA9Khl8DxvPAOL92Ts=" # encrypted value of your token
 script:
   # other script steps might be done before running the actual analysis
   - sonar-scanner
