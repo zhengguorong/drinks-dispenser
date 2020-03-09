@@ -29,7 +29,7 @@ class StockChart extends React.Component {
       g
         .attr('transform', `translate(${margin.left},0)`)
         .call(d3.axisLeft(y))
-        .call((g) => g.select('.domain').remove());
+        .call((d) => d.select('.domain').remove());
 
     const svg = d3.select('svg');
     svg

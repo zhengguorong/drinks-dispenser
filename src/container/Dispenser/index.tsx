@@ -117,7 +117,7 @@ class Dispenser extends React.Component<Props, State> {
     const interval = setInterval(() => {
       const curTemperature = Math.floor(Math.random() * 1000) / 10;
       temperatureAPI.updateTemperature('123', curTemperature);
-    }, 60 * 1000);
+    }, 2 * 1000); // you should change interval value to 60
     return interval;
   }
 }

@@ -7,7 +7,7 @@ type Props = {
 };
 
 type Step = {
-  name: String;
+  name: string;
 };
 function Steps(props: Props) {
   return (

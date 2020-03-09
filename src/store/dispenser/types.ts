@@ -3,7 +3,7 @@ export interface Product {
   name: string,
   checked: boolean,
   stock: number,
-};
+}
 
 export interface DispenserState {
   products: Product[]

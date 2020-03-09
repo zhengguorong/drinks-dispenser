@@ -9,7 +9,7 @@ import './index.scss';
 interface State {
   isStockChart: boolean;
   temps: any;
-};
+}
 interface RootState {
   dispenser: DispenserState
 }

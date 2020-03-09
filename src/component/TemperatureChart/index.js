@@ -38,9 +38,9 @@ class TemperatureChart extends React.Component {
       g
         .attr('transform', `translate(${margin.left},0)`)
         .call(d3.axisLeft(y))
-        .call((g) => g.select('.domain').remove())
-        .call((g) =>
-          g
+        .call((d) => d.select('.domain').remove())
+        .call((d) =>
+          d
             .select('.tick:last-of-type text')
             .clone()
             .attr('x', 3)
