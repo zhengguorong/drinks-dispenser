@@ -1,4 +1,4 @@
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=zhengguorong_drinks-dispenser&metric=alert_status)](https://sonarcloud.io/dashboard?id=zhengguorong_drinks-dispenser) [![Build Status](https://travis-ci.org/zhengguorong/drinks-dispenser.svg?branch=master)](https://travis-ci.org/zhengguorong/drinks-dispenser)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=zhengguorong_drinks-dispenser&metric=alert_status)](https://sonarcloud.io/dashboard?id=zhengguorong_drinks-dispenser)
 
 ## Technology Stack
 
